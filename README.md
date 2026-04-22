@@ -24,7 +24,7 @@
 ## ✨ Features
 
 - 🌐 **Live Web Crawling** — Firecrawl scrapes up to 15 URLs in real time for any topic
-- 🧠 **AI Report Generation** — Gemini 1.5 Flash writes a structured, professional research report
+- 🧠 **AI Report Generation** — Gemini 2.5 Flash writes a structured, professional research report
 - ✨ **Report Enhancement** — Second AI pass adds examples, statistics, and expert perspectives
 - 🔬 **Citation Accuracy Engine** — Each claim is scored against crawled source material (High / Med / Low)
 - 📕 **PDF Export** — Download a professional PDF with citation breakdown page
@@ -38,7 +38,7 @@
 | Layer | Technology |
 |---|---|
 | **Frontend** | Streamlit |
-| **AI Model** | Google Gemini 1.5 Flash |
+| **AI Model** | Google Gemini 2.5 Flash |
 | **Web Scraping** | Firecrawl Deep Research API |
 | **PDF Generation** | fpdf2 |
 | **Citation Engine** | Custom (SequenceMatcher + chunk scoring) |
