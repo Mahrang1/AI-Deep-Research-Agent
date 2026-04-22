@@ -1,11 +1,23 @@
+<div align="center">
+
 # 🔍 Gemini Deep Research Agent
+
+### *Web crawling + AI writing + Citation verification — all in one click.*
+
+[![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Gemini](https://img.shields.io/badge/Gemini_1.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com)
+[![Firecrawl](https://img.shields.io/badge/Firecrawl-FF6B35?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://firecrawl.dev)
 
 > AI-powered research tool that crawls the web, generates structured reports, verifies citations, and exports to PDF — all in one click.
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
-![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat&logo=google&logoColor=white)
-![Firecrawl](https://img.shields.io/badge/Firecrawl-orange?style=flat)
+</div>
+
+---
+
+## 📸 Demo
+
+> *(Screenshot / GIF coming soon)*
 
 ---
 
@@ -25,38 +37,57 @@
 
 | Layer | Technology |
 |---|---|
-| Frontend | Streamlit |
-| AI Model | Google Gemini 1.5 Flash |
-| Web Scraping | Firecrawl Deep Research API |
-| PDF Generation | fpdf2 |
-| Citation Engine | Custom (SequenceMatcher + chunk scoring) |
+| **Frontend** | Streamlit |
+| **AI Model** | Google Gemini 1.5 Flash |
+| **Web Scraping** | Firecrawl Deep Research API |
+| **PDF Generation** | fpdf2 |
+| **Citation Engine** | Custom (SequenceMatcher + chunk scoring) |
+
+---
+
+## 🔬 How Citation Accuracy Works
+
+Every sentence in the generated report is scored against the crawled source text using a **two-signal algorithm:**
+
+- **Chunk matching** — 6-word sliding window against source content *(65% weight)*
+- **Sequence similarity** — SequenceMatcher ratio against first 3000 chars *(35% weight)*
+
+| Score | Label | Meaning |
+|---|---|---|
+| 70%+ | 🟢 High | Directly grounded in sources |
+| 45–69% | 🟡 Med | Partially supported |
+| Below 45% | 🔴 Low | May be AI-inferred |
 
 ---
 
 ## 🚀 Run Locally
 
-**1. Clone the repo**
+### 1. Clone the repo
+
 ```bash
-git clone https://github.com/Mahrang1/deep-research-agent.git
-cd deep-research-agent
+git clone https://github.com/Mahrang1/AI-Deep-Research-Agent.git
+cd AI-Deep-Research-Agent
 ```
 
-**2. Install dependencies**
+### 2. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-**3. Setup API keys — create a `.env` file:**
-```
+### 3. Setup API keys — create a `.env` file
+
+```env
 GOOGLE_API_KEY=your_gemini_key_here
 FIRECRAWL_API_KEY=your_firecrawl_key_here
 ```
 
 Get your free keys:
 - 🔑 Gemini → [aistudio.google.com](https://aistudio.google.com)
-- 🔑 Firecrawl → [firecrawl.dev](https://firecrawl.dev) (500 free credits)
+- 🔑 Firecrawl → [firecrawl.dev](https://firecrawl.dev) *(500 free credits)*
 
-**4. Run the app**
+### 4. Run the app
+
 ```bash
 streamlit run app.py
 ```
@@ -65,30 +96,13 @@ streamlit run app.py
 
 ## 📦 Requirements
 
-```
+```txt
 streamlit
 google-genai
 firecrawl-py
 python-dotenv
 fpdf2
 ```
-
----
-
-## 🔬 How Citation Accuracy Works
-
-Every sentence in the generated report is scored against the crawled source text using a two-signal algorithm:
-
-- **Chunk matching** — 6-word sliding window against source content (65% weight)
-- **Sequence similarity** — SequenceMatcher ratio against first 3000 chars (35% weight)
-
-Scores are shown per-claim and as an overall percentage:
-
-| Score | Label | Meaning |
-|---|---|---|
-| 70%+ | 🟢 High | Directly grounded in sources |
-| 45–69% | 🟡 Medium | Partially supported |
-| Below 45% | 🔴 Low | May be AI-inferred |
 
 ---
 
@@ -108,6 +122,12 @@ Scores are shown per-claim and as an overall percentage:
 
 **Mahrang** — [github.com/Mahrang1](https://github.com/Mahrang1)
 
+*Powered by Google Gemini + Firecrawl | Built with Streamlit*
+
 ---
 
-<p align="center">Powered by Google Gemini + Firecrawl | Built with Streamlit</p>
+<div align="center">
+
+*If this project helped you, drop a ⭐ — it means a lot!* 😊
+
+</div>
