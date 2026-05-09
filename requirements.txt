@@ -2,3 +2,4 @@ openai-agents
 firecrawl
 streamlit
 firecrawl-py
+fpdf2
